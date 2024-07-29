@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reasponsiveandadaptiveui/responsive_deshboard/all_expensess/widgets/all_expensess_widget.dart';
-import 'package:reasponsiveandadaptiveui/responsive_deshboard/all_expensess/widgets/quick_invoice.dart';
+import 'package:reasponsiveandadaptiveui/responsive_deshboard/all_expensess/all_expenses_quick_invoice_section.dart';
 import 'package:reasponsiveandadaptiveui/responsive_deshboard/drawer/widgets/custom_drawer.dart';
 
 class DesktopAdaptiveLayout extends StatelessWidget {
@@ -12,13 +11,14 @@ class DesktopAdaptiveLayout extends StatelessWidget {
       children: [
         Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
-        Expanded(flex: 2, child: Column(
-          children: [
-            AllExpenses(),
-            QuickInvoice(),
-          ],
-        )),
+        Expanded(
+          flex: 2,
+          child: SingleChildScrollView(
+            child: AllExpensesAndQuickInvoiceSection(),
+          ),
+        ),
       ],
     );
   }
 }
+
