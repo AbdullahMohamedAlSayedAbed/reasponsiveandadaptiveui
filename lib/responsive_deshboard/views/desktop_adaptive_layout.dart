@@ -23,7 +23,6 @@ class DesktopAdaptiveLayout extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 40),
               MyCardAndTransactionHistorySection(),
               SizedBox(height: 24),
               IncomeSection(),
