@@ -26,17 +26,32 @@ class ActiveAllExpensesItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AllExpensesItemHeader(
-                backgroundColor: Colors.white.withOpacity(.100000149),
+              backgroundColor: Colors.white.withOpacity(.100000149),
               imageColor: Colors.white,
               image: itemModel.image,
             ),
             const SizedBox(height: 34),
-            Text(itemModel.title, style: AppStyles.styleMedium16(context).copyWith(color: Colors.white)),
+            FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(itemModel.title,
+                    style: AppStyles.styleMedium16(context)
+                        .copyWith(color: Colors.white))),
             Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 16),
-              child: Text(itemModel.date, style: AppStyles.styleRegular14(context).copyWith(color: const Color(0xfffafafa))),
+              child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Text(itemModel.date,
+                      style: AppStyles.styleRegular14(context)
+                          .copyWith(color: const Color(0xfffafafa)))),
             ),
-            Text(itemModel.price, style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white)),
+            FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(itemModel.price,
+                    style: AppStyles.styleSemiBold24(context)
+                        .copyWith(color: Colors.white))),
           ],
         ));
   }

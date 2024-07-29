@@ -9,7 +9,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
     super.key,
     required this.itemModel,
   });
-   
+
   final AllExpensesItemModel itemModel;
 
   @override
@@ -20,22 +20,34 @@ class InActiveAllExpensesItem extends StatelessWidget {
           color: const Color(0xffF1F1F1),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
-              ),
+              side: const BorderSide(color: Color(0xffF1F1F1), width: 1)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AllExpensesItemHeader(
-            
               image: itemModel.image,
             ),
             const SizedBox(height: 34),
-            Text(itemModel.title, style: AppStyles.styleMedium16(context)),
+            FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(itemModel.title,
+                    style: AppStyles.styleMedium16(context))),
             Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 16),
-              child: Text(itemModel.date, style: AppStyles.styleRegular14(context)),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(itemModel.date,
+                    style: AppStyles.styleRegular14(context)),
+              ),
             ),
-            Text(itemModel.price, style: AppStyles.styleSemiBold24(context)),
+            FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: AlignmentDirectional.centerStart,
+                child: Text(itemModel.price,
+                    style: AppStyles.styleSemiBold24(context))),
           ],
         ));
   }

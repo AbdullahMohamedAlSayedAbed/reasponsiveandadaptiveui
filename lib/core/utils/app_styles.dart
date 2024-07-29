@@ -7,7 +7,7 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w400,
       fontFamily: 'Montserrat',
-      color: Color(0xff064061),
+      color: const Color(0xff064061),
     );
   }
 
@@ -16,7 +16,7 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w400,
       fontFamily: 'Montserrat',
-      color: Color(0xffAAAAAA),
+      color: const Color(0xffAAAAAA),
     );
   }
 
@@ -25,7 +25,7 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(context, fontSize: 14),
       fontWeight: FontWeight.w400,
       fontFamily: 'Montserrat',
-      color: Color(0xffAAAAAA),
+      color: const Color(0xffAAAAAA),
     );
   }
 
@@ -33,7 +33,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Montserrat',
-      color: Color(0xff064061),
+      color: const Color(0xff064061),
       fontWeight: FontWeight.w500,
     );
   }
@@ -42,7 +42,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontFamily: 'Montserrat',
-      color: Color(0xffffffff),
+      color: const Color(0xffffffff),
       fontWeight: FontWeight.w500,
     );
   }
@@ -51,7 +51,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Montserrat',
-      color: Color(0xff064061),
+      color: const Color(0xff064061),
       fontWeight: FontWeight.w600,
     );
   }
@@ -60,7 +60,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontFamily: 'Montserrat',
-      color: Color(0xff064061),
+      color: const Color(0xff064061),
       fontWeight: FontWeight.w600,
     );
   }
@@ -69,7 +69,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 24),
       fontFamily: 'Montserrat',
-      color: Color(0xff4EB7F2),
+      color: const Color(0xff4EB7F2),
       fontWeight: FontWeight.w600,
     );
   }
@@ -78,7 +78,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontFamily: 'Montserrat',
-      color: Color(0xff4EB7F2),
+      color: const Color(0xff4EB7F2),
       fontWeight: FontWeight.w600,
     );
   }
@@ -87,7 +87,7 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontFamily: 'Montserrat',
-      color: Color(0xff4EB7F2),
+      color: const Color(0xff4EB7F2),
       fontWeight: FontWeight.w700,
     );
   }

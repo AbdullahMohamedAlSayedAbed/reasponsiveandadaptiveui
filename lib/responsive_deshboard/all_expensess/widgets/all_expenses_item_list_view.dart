@@ -33,36 +33,45 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   int selected = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: List.generate(items.length, (index) {
-        return Expanded(
-            child: index == 1
-                ? InkWell(
-                    onTap: () {
-                      setState(() {
-                        selected = index;
-                      });
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: AllExpensesItem(
-                        itemModel: items[index],
-                        isSelected: selected == index,
-                      ),
-                    ),
-                  )
-                : InkWell(
-                  onTap: () {
-                    setState(() {
-                        selected = index;
-                      });
-                  },
-                  child: AllExpensesItem(
-                      itemModel: items[index],
-                      isSelected: selected == index,
-                    ),
-                ));
-      }),
-    );
+    return Row(children: [
+      Expanded(
+          child: InkWell(
+        onTap: () {
+          setState(() {
+            selected = 0;
+          });
+        },
+        child: AllExpensesItem(
+          itemModel: items[0],
+          isSelected: selected == 0,
+        ),
+      )),
+      const SizedBox(width: 12),
+      Expanded(
+          child: InkWell(
+        onTap: () {
+          setState(() {
+            selected = 1;
+          });
+        },
+        child: AllExpensesItem(
+          itemModel: items[1],
+          isSelected: selected == 1,
+        ),
+      )),
+      const SizedBox(width: 12),
+      Expanded(
+          child: InkWell(
+        onTap: () {
+          setState(() {
+            selected = 2;
+          });
+        },
+        child: AllExpensesItem(
+          itemModel: items[2],
+          isSelected: selected == 2,
+        ),
+      )),
+    ]);
   }
 }
