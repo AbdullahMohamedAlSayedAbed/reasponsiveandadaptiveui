@@ -35,7 +35,7 @@ class MyCard extends StatelessWidget {
                   'Syah Bandi',
                   style: AppStyles.styleMedium20,
                 ),
-                // trailing: SvgPicture.asset(Assets.imagesGallery),
+                trailing: SvgPicture.asset(Assets.imagesGallery),
               ),
               const Spacer(),
               Text('0918 8124 0042 8129',

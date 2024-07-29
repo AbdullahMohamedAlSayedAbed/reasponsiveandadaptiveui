@@ -19,10 +19,13 @@ class TransactionItem extends StatelessWidget {
               const EdgeInsets.only(left: 31, right: 42 - 24, top: 16),
           title: Text(
             transactionModel.title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16
+                
           ),
           subtitle:
-              Text(transactionModel.date, style: AppStyles.styleRegular16),
+              Text(transactionModel.date, style: AppStyles.styleRegular16
+                .copyWith(color: const Color(0xffAAAAAA)),
+          ),
           trailing: Text(
             transactionModel.amount,
             style: AppStyles.styleSemiBold20.copyWith(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reasponsiveandadaptiveui/responsive_deshboard/card/models/transaction_model.dart';
+import 'package:reasponsiveandadaptiveui/responsive_deshboard/card/widgets/transaction_item.dart';
 
 class TransactionHistoryListView extends StatelessWidget {
   const TransactionHistoryListView({super.key});
@@ -22,6 +23,13 @@ class TransactionHistoryListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: items.length,
+      itemBuilder: (context, index) {
+      return TransactionItem(
+        transactionModel: items[index],
+      );
+    },);
   }
 }

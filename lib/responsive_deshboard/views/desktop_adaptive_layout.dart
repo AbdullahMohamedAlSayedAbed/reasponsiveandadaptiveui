@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reasponsiveandadaptiveui/responsive_deshboard/all_expensess/all_expenses_quick_invoice_section.dart';
-import 'package:reasponsiveandadaptiveui/responsive_deshboard/card/widgets/transaction_history.dart';
+import 'package:reasponsiveandadaptiveui/responsive_deshboard/card/widgets/income_section.dart';
+import 'package:reasponsiveandadaptiveui/responsive_deshboard/card/widgets/my_card_and_transaction_history_section.dart';
 import 'package:reasponsiveandadaptiveui/responsive_deshboard/drawer/widgets/custom_drawer.dart';
 
 class DesktopAdaptiveLayout extends StatelessWidget {
@@ -8,20 +9,28 @@ class DesktopAdaptiveLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Expanded(child: CustomDrawer()),
-        SizedBox(width: 32),
-        Expanded(
-          flex: 2,
-          child: SingleChildScrollView(
-            child: AllExpensesAndQuickInvoiceSection(),
+    return const Row(children: [
+      Expanded(child: CustomDrawer()),
+      SizedBox(width: 32),
+      Expanded(
+        flex: 2,
+        child: SingleChildScrollView(
+          child: AllExpensesAndQuickInvoiceSection(),
+        ),
+      ),
+      SizedBox(width: 24),
+      Expanded(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 40),
+              MyCardAndTransactionHistorySection(),
+              SizedBox(height: 24),
+              IncomeSection(),
+            ],
           ),
         ),
-        SizedBox(width: 24),
-        Expanded(child: TransactionHistory()),
-      ],
-    );
+      )
+    ]);
   }
 }
-
