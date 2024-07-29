@@ -11,7 +11,7 @@ class AllExpensesHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text('All Expenses', style: AppStyles.styleSemiBold20),
+         Text('All Expenses', style: AppStyles.styleSemiBold20(context)),
         Container(
           padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
@@ -20,9 +20,9 @@ class AllExpensesHeader extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: const Color(0xffECECEC), width: 1),
             ),
-            child: const Row(
+            child:  Row(
               children: [
-                Text('Monthly', style: AppStyles.styleMedium16),
+                Text('Monthly', style: AppStyles.styleMedium16(context)),
                 SizedBox(width: 12),
                 Icon(CupertinoIcons.chevron_down,color: Color(0xff064061),)
               ],

@@ -20,6 +20,7 @@ class _IncomeChartState extends State<IncomeChart> {
 
   PieChartData getChartData() {
     return PieChartData(
+      sectionsSpace: 0,
         pieTouchData: PieTouchData(
             enabled: true,
             touchCallback: (FlTouchEvent event, pieTouchResponse) {
@@ -29,6 +30,7 @@ class _IncomeChartState extends State<IncomeChart> {
             }),
         sections: [
           PieChartSectionData(
+           
             value: 40,
             color: const Color(0xff208CC8),
             showTitle: false,

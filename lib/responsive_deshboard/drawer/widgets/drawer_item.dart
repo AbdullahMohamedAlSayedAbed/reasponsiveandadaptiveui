@@ -15,7 +15,7 @@ class DrawerItem extends StatelessWidget {
             leading: SvgPicture.asset(drawerItemModel.image),
             title: Text(
               drawerItemModel.title,
-              style: AppStyles.styleRegular16,
+              style: AppStyles.styleRegular16(context),
             ),
           )
         : ListTile(
@@ -26,7 +26,7 @@ class DrawerItem extends StatelessWidget {
             ),
             title: Text(
               drawerItemModel.title,
-              style: AppStyles.styleBold16,
+              style: AppStyles.styleBold16(context),
             ));
   }
 }

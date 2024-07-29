@@ -7,12 +7,27 @@ class ItemDetails extends StatelessWidget {
   final ItemDetailsModel itemDetailsModel;
   @override
   Widget build(BuildContext context) {
+    // return Padding(
+    //   padding: const EdgeInsets.only(left: 16),
+    //   child: FittedBox(
+    //     fit: BoxFit.scaleDown,
+    //     child: Row(
+    //       mainAxisAlignment: MainAxisAlignment.start,
+    //       children: [
+    //         CircleAvatar(radius: 6, backgroundColor: itemDetailsModel.color),
+    //         const SizedBox(width: 12),
+    //         Text(itemDetailsModel.title, style: AppStyles.styleRegular16),
+    //         const SizedBox(width: 24),
+    //         Text(itemDetailsModel.value, style: AppStyles.styleMedium16),
+    //       ],
+    //     ),
+    //   ),
+    // );
+
     return ListTile(
-      leading:
-          CircleAvatar(radius: 6, backgroundColor: itemDetailsModel.color),
-      title: Text(itemDetailsModel.title, style: AppStyles.styleRegular16),
-      trailing:
-          Text(itemDetailsModel.value, style: AppStyles.styleMedium16),
+      leading: CircleAvatar(radius: 6, backgroundColor: itemDetailsModel.color),
+      title: Text(itemDetailsModel.title, style: AppStyles.styleRegular16(context)),
+      trailing: Text(itemDetailsModel.value, style: AppStyles.styleMedium16(context)),
     );
   }
 }

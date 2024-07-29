@@ -13,21 +13,31 @@ class DesktopAdaptiveLayout extends StatelessWidget {
       Expanded(child: CustomDrawer()),
       SizedBox(width: 32),
       Expanded(
-        flex: 2,
-        child: SingleChildScrollView(
-          child: AllExpensesAndQuickInvoiceSection(),
-        ),
-      ),
-      SizedBox(width: 24),
-      Expanded(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              MyCardAndTransactionHistorySection(),
-              SizedBox(height: 24),
-              IncomeSection(),
-            ],
-          ),
+        flex: 3,
+        child: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: AllExpensesAndQuickInvoiceSection(),
+                  ),
+                  SizedBox(width: 24),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        MyCardAndTransactionHistorySection(),
+                        SizedBox(height: 24),
+                        Expanded(child: IncomeSection()),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       )
     ]);
